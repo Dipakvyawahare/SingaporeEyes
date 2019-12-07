@@ -10,6 +10,7 @@ import UIKit
 
 class TrafficCamerasViewController: UIViewController {
     @IBOutlet weak var mapView: MapView!
+    @IBOutlet weak var loaderImageView: UIImageView!
     
     var output: TrafficCamerasViewControllerInteractorInterface?
     var router: TrafficCamerasRouter = TrafficCamerasRouter()
@@ -42,10 +43,13 @@ class TrafficCamerasViewController: UIViewController {
         mapView.delegate = mapViewConfigurator
         mapViewConfigurator.delegate = self
         mapViewDataSource.data.addAndNotify(observer: self) { [weak self ] in
+            self?.loaderImageView.isHidden = true
             self?.mapView.reloadAnnotations()
             self?.mapView.fitMapViewToAnnotaionList()
         }
         refreshData()
+        loaderImageView.image = UIImage(named: "Loading")
+        loaderImageView.isHidden = false
         
         //As per API documentation:
         //We recommend that this endpoint be called every minute

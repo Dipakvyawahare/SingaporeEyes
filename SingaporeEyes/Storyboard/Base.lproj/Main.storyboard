@@ -98,11 +98,20 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U46-Jg-Cgd">
+                                <rect key="frame" x="123.5" y="269.5" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="OyJ-3O-CBF"/>
+                                    <constraint firstAttribute="height" constant="128" id="jGd-Vd-Tgw"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="U46-Jg-Cgd" firstAttribute="centerX" secondItem="C1g-OO-SMG" secondAttribute="centerX" id="AN7-iB-igX"/>
                             <constraint firstItem="mE9-mY-9wa" firstAttribute="trailing" secondItem="Hzs-x9-99T" secondAttribute="trailing" id="D1y-d2-Zqa"/>
                             <constraint firstItem="mE9-mY-9wa" firstAttribute="leading" secondItem="Hzs-x9-99T" secondAttribute="leading" id="nWw-oA-2Ol"/>
+                            <constraint firstItem="U46-Jg-Cgd" firstAttribute="centerY" secondItem="C1g-OO-SMG" secondAttribute="centerY" id="paQ-XD-NyS"/>
                             <constraint firstItem="mE9-mY-9wa" firstAttribute="top" secondItem="Hzs-x9-99T" secondAttribute="top" id="rsF-t9-WaM"/>
                             <constraint firstAttribute="bottom" secondItem="mE9-mY-9wa" secondAttribute="bottom" id="wbb-FP-8ac"/>
                         </constraints>
@@ -110,6 +119,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gLs-Ry-CPH"/>
                     <connections>
+                        <outlet property="loaderImageView" destination="U46-Jg-Cgd" id="orJ-kL-kJp"/>
                         <outlet property="mapView" destination="mE9-mY-9wa" id="0xc-qA-fun"/>
                     </connections>
                 </viewController>

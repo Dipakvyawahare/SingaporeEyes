@@ -35,7 +35,7 @@ class PreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true
-        if let gifData = getGifData() {
+        if let gifData = FileManager.getGifData() {
             imageView.kf.indicatorType = .image(imageData: gifData)
         } else {
             imageView.kf.indicatorType = .activity
@@ -61,14 +61,5 @@ extension PreviewViewController: PreviewPresenterViewControllerInterface {
                                 .transition(.fade(1)),
                                 .cacheOriginalImage
             ])
-    }
-    
-    func getGifData() -> Data? {
-        var gifData: Data?
-        do {
-            let url = Bundle.main.url(forResource: "loader", withExtension: "gif")!
-            gifData = try Data(contentsOf: url)
-        } catch {}
-        return gifData
     }
 }

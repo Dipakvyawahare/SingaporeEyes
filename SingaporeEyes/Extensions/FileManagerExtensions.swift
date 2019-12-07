@@ -25,4 +25,13 @@ extension FileManager {
         
         return nil
     }
+    
+    static func getGifData() -> Data? {
+        var gifData: Data?
+        do {
+            let url = Bundle.main.url(forResource: "loader", withExtension: "gif")!
+            gifData = try Data(contentsOf: url)
+        } catch {}
+        return gifData
+    }
 }

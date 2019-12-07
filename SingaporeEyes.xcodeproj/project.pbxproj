@@ -17,6 +17,7 @@
 		476B76D0239BEBEB00887FB9 /* Sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 476B76CF239BEBEB00887FB9 /* Sample.json */; };
 		476B76D2239BECC300887FB9 /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B76D1239BECC300887FB9 /* CameraTests.swift */; };
 		476B76D5239C031800887FB9 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 476B76D4239C031800887FB9 /* loader.gif */; };
+		476B76D7239C240300887FB9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 476B76D6239C240300887FB9 /* README.md */; };
 		47852EB5239B4C270036178A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47852EB4239B4C270036178A /* AppDelegate.swift */; };
 		47852EBA239B4C270036178A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47852EB8239B4C270036178A /* Main.storyboard */; };
 		47852EBC239B4C280036178A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47852EBB239B4C280036178A /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 		476B76CF239BEBEB00887FB9 /* Sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sample.json; sourceTree = "<group>"; };
 		476B76D1239BECC300887FB9 /* CameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTests.swift; sourceTree = "<group>"; };
 		476B76D4239C031800887FB9 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
+		476B76D6239C240300887FB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		47852EB1239B4C270036178A /* SingaporeEyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingaporeEyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47852EB4239B4C270036178A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47852EB9239B4C270036178A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		47852EA8239B4C270036178A = {
 			isa = PBXGroup;
 			children = (
+				476B76D6239C240300887FB9 /* README.md */,
 				47852EB3239B4C270036178A /* SingaporeEyes */,
 				47852EC8239B4C290036178A /* SingaporeEyesTests */,
 				47852ED3239B4C290036178A /* SingaporeEyesUITests */,
@@ -535,6 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476B76D7239C240300887FB9 /* README.md in Resources */,
 				47852EBF239B4C280036178A /* LaunchScreen.storyboard in Resources */,
 				47852F1E239B76A40036178A /* MapView.xib in Resources */,
 				47852EBC239B4C280036178A /* Assets.xcassets in Resources */,
