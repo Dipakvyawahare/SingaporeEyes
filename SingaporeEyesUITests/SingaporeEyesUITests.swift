@@ -7,28 +7,49 @@
 //
 
 import XCTest
+@testable import SingaporeEyes
 
 class SingaporeEyesUITests: XCTestCase {
-
+    var app: XCUIApplication!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        super.setUp()
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    @discardableResult
+    func waiterResultWithExpextation(_ element: XCUIElement) -> XCTWaiter.Result {
+        let myPredicate = NSPredicate(format: "exists == true")
+        let myExpectation = expectation(for: myPredicate, evaluatedWith: element,
+                                        handler: nil)
+        let result = XCTWaiter().wait(for: [myExpectation], timeout: 5)
+        return result
     }
-
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testSwiping() {
+        let map = app.maps.element
+        waiterResultWithExpextation(map)
+        let isMapExist = map.exists
+        XCTAssertTrue(isMapExist)
+        map.swipeLeft()
+        map.swipeDown()
+        map.swipeUp()
     }
-
+    
+    func testAnnotationTap() {
+        let pin = app.otherElements.matching(identifier: "MapAnnotaAccesIdentifier").element(boundBy: 0)
+        waiterResultWithExpextation(pin)
+        XCTAssertTrue(pin.exists)
+        pin.tap()
+        
+        let button = app.buttons["close 96"]
+        let imageView = app.images["ImagePreview"]
+        waiterResultWithExpextation(button)
+        XCTAssertTrue(button.exists)
+        XCTAssertTrue(imageView.exists)
+        
+        button.tap()
+    }
 }

@@ -1,0 +1,6 @@
+framework module Pods_SingaporeEyesTests {
+  umbrella header "Pods-SingaporeEyesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
