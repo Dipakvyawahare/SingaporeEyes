@@ -1,5 +1,5 @@
 # SingaporeEyes
-- Created for demo test given by Zuehlke.
+## Clean Swift Architecture (VIP)
 
 ## Features
 
