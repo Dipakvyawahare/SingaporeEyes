@@ -28,7 +28,7 @@ class PreviewPresenterTests: XCTestCase {
     }
     
     func testPreviewImage() {
-        let url = "https://images.data.gov.sg/api/traffic-images/2019/12/78405cb4-f46e-4dfb-bfd5-1bc1b6f51276.jpg"
+        let url = "https://images/2019/12/78405cb4-f46e-4dfb-bfd5-1bc1b6f51276.jpg"
         sut.previewImage(response: Preview.Info.init(imageUrl: url,
                                                      timestamp: Date()))
         XCTAssert(presenterOutputSpy.previewDone, "previewImage() should have been called")

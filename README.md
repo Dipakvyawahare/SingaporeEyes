@@ -3,7 +3,7 @@
 
 ## Features
 
-- [x] Show Traffic Cameras on Map for Singapore
+- [x] Show Traffic Cameras on Map
 - [x] Preview latset photos captured by traffic camera
 
 ## Requirements

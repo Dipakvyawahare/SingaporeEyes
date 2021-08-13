@@ -40,7 +40,7 @@ class CameraTests: XCTestCase {
         // expected valid TrafficCameras with valid data
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = TrafficCameraDateFormatter.request.rawValue
-        let url = "https://images.data.gov.sg/api/traffic-images/2019/12/78405cb4-f46e-4dfb-bfd5-1bc1b6f51276.jpg"
+        let url = "https://images/2019/12/78405cb4-f46e-4dfb-bfd5-1bc1b6f51276.jpg"
         cameraService?.fetchTrafficCamera(date: Date(), { (result) in
             switch result {
             case .failure:

@@ -17,7 +17,7 @@ protocol WebServiceProtocol {
 
 final class WebService: WebServiceProtocol {
     private init() {}
-    let endPoint = URL(string: "https://api.data.gov.sg/v1/transport/traffic-images")!
+    let endPoint = URL(string: "")!
     
     static let shared = WebService()
     
